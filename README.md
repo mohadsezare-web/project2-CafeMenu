@@ -4,7 +4,7 @@
 
 -![project2](https://github.com/user-attachments/assets/39e855bf-d2ad-476b-9c17-9b14590a443b)
 
-- [Demo Project](https://pouria-farahani-developer.github.io/Accordion-Menu-By-React/)
+- [Demo Project]( https://mohadsezare-web.github.io/project2-CafeMenu/)
 
 - Developed by Mohadese zare
 
