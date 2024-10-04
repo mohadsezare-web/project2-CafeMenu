@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAFE</title>
+    <link rel="stylesheet" href="css/fontello.css">
+    <style>
+        @font-face {
+            font-family:italic;
+            src: url(Oswald/Oswald-VariableFont_wght.ttf);
+        }
+        *{
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        body{
+            position: relative;
+            font-family: italic;
+        }
+        .aside{
+            width:100%;
+            height: 3850px;
+            >.menu{
+            width:23%;
+            height: 1000px;
+            /* border: 2px solid black; */
+            background-color: rgb(40, 43, 47);
+            position:sticky ;
+            top: 1px; right: 0;
+            >figure{
+                width: 100%;
+                height: 38%;
+                /* border: 2px solid yellow; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                >img{
+                    width: 39%;
+                    height: 62%;
+                    object-fit: cover;
+                }
+            }
+            >ul{
+                width: 100%;
+                height: 42%;
+                /* border:  2px solid red; */
+                list-style-type: none;
+                >li{
+                    width: 100%;
+                    height: 70px;
+                    border-bottom: 1px solid rgba(241, 242, 240, 0.053); 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    >a{
+                        font-size: 20px;
+                        text-transform: uppercase;
+                        color: rgb(245, 243, 243);
+                        text-decoration: none;
+                        transition: .4s;
+                        &:hover{
+                            color: rgb(174, 137, 93);
+                        }
+                    }
+                    >#onee{
+                        color: rgb(174, 137, 93);
+                    }
+                }
+                >#line{
+                    border-top: 1px solid rgba(241, 242, 240, 0.053);
+                }
+            }
+            >.icon{
+                width: 100%;
+                height: 20%;
+                /* border: 2px solid red;  */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                >i{
+                   font-size: 35px;
+                   padding-left: 10px;
+                   transition: .5s;
+                   border-radius: 30px 10px;
+                   &:hover{
+                    background-color: rgba(246, 243, 243, 0.142);
+                   }
+                }
+            }
+        }
+        }
+        .hero{
+            width: 77%;
+            height: 780px;
+            display: flex;
+            /* border: 2px solid red; */
+            background-image: url(img/cafe-hero-home.jpg);
+            background-size: cover;
+            position: absolute;
+            top: 0; right: 0;
+        }
+        .new{
+            width: 780px;
+            height: 1000px;
+            /* border: 2px solid orange; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:flex-start;
+            position: absolute;
+            top:780px;;left:349px;
+            background-color:rgb(49, 53, 57) ;
+            >h1{
+                font-size: 70px;
+                padding: 75px 80px;
+                font-weight: 280;
+                color: white;
+            }
+            >h3{
+                font-size: 20px;
+                margin: -180px 80px;
+                font-weight: 350;
+                color: rgb(174, 137, 93);
+            }
+            >.hline{
+                width: 200px;
+                height: 1px;
+                background-color:rgb(174, 137, 93) ;
+                margin-left: 80px;
+                margin-top: -230px;
+            }
+            .imge{
+                 width: 100%;
+                 height: 200px;
+                 /* border: 2px solid yellowgreen; */
+                 display: flex;
+                 justify-content: center;
+                 margin-top:-300px;
+                 margin-left: -10px;
+                 >img{
+                    width: 40%;
+                    height: 220px;
+                 }
+            }
+            >p{
+                width: 80%;
+                height: 300px;
+                /* border: 2px solid seagreen; */
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                margin: -170px 80px;
+                font-size: 20px;
+                text-transform: capitalize;
+                text-align: left;
+                color: rgba(255, 255, 255, 0.53);
+            }
+            >.butt{
+                width: 260px;
+                height: 80px;
+                border: 2px solid rgba(254, 252, 252, 0.954);
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
+                margin-left: 80px;
+                margin-bottom: -400px;
+                >button{
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.096);
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    color: rgba(255, 255, 255, 0.925);
+                    transition: .5s;
+                    &:hover{
+                        background-color: rgba(241, 244, 247, 0.039);
+                    }
+                }
+            }
+                
+        }
+        .nim{
+            width: 430px;
+            height: 1100px;
+            /* border: 2px solid yellow; */
+            position: absolute;
+            top: 780px; right: 0;
+            background-image: url(img/about-background2.jpg);
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+        .parall{
+            width: 77%;
+            height:780px;
+            /* border: 2px solid yellow; */
+            position: absolute;
+            right: 0; top: 1780px;
+            background-image: url(img/parallax-image.jpg);
+            background-repeat: no-repeat;
+            background-size:110%;
+            background-position:0 -20px;
+            >h2{
+                width: 100%;
+                height: 350px;
+                /* border: 2px solid red; */
+                font-size: 70px;
+                font-weight: 300;
+                text-transform: uppercase;
+                color: rgba(245, 241, 241, 0.829);
+                display: flex;
+                justify-content:center;
+                align-items: flex-end;
+            }
+            >.line2{
+                width: 220px;
+                height: 1px;
+                background-color:rgb(174, 137, 93) ;
+                margin-left: 490px;
+                margin-top: 30px;
+            }
+            >p{
+                width: 100%;
+                height: 180px;
+                /* border:  2px solid orange; */
+                font-size: 30px;
+                text-transform: capitalize;
+                color: rgba(255, 255, 255, 0.829);
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            >.butt2{
+                width: 100;
+                height: 100px;
+                /* border: 2px solid palevioletred; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                >button{
+                    width: 220px;
+                    height: 70px;
+                    text-align: center;
+                    font-size: 20px;
+                    border: 2px solid rgba(255, 255, 255, 0.854);
+                    border-radius: 4px;
+                    background-color: rgba(31, 30, 30, 0);
+                    text-transform: capitalize;
+                    color: rgba(243, 241, 241, 0.913);
+                    transition: .4s;
+                    &:hover{
+                        background-color: rgba(235, 233, 233, 0.064);
+                    }
+                }
+            }
+        }
+        .new2{ 
+            width: 77%;
+            height: 500px;
+            /* border: 2px solid red; */
+            position: absolute;
+            right: 0; top: 2540px;
+            display: flex;
+            >.swiss{
+                width: 50%;
+                height: 100%;
+                /* border: 2px solid yellow; */
+                background-color: rgb(36, 41, 45);
+                >h2{
+                    font-size: 25px;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                    color: rgba(174, 137, 93, 0.886) ;
+                    margin: 60px 50px;
+                }
+                >.line3{
+                    width: 210px;
+                    border: 1px solid rgba(174, 137, 93, 0.874);
+                    margin: -210px 50px;
+                }
+                >p{
+                    font-size: 40px;
+                    text-transform: capitalize;
+                    color: white;
+                    margin-left: 50px;
+                }
+                >.butt4{
+                    width: 240px;
+                    height: 70px;
+                    position: absolute;
+                    bottom: 60px; left: 50px;
+                    background-color:rgb(36, 41, 45) ;
+                    border: 2px solid rgba(255, 255, 255, 0.788);
+                    border-radius: 3px;
+                    color: white;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    transition: .4s;
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 0.059);
+                    }
+                }
+            }
+            >.special{
+                width: 50%;
+                height: 100%;
+                /* border: 2px solid palevioletred; */
+                background-color: rgb(49, 53, 57);
+                >h2{
+                    font-size: 25px;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                    color: rgba(174, 137, 93, 0.886) ;
+                    margin: 60px 50px;
+                }
+                >.line4{
+                    width: 210px;
+                    border: 1px solid rgba(174, 137, 93, 0.874);
+                    margin: -210px 50px;
+                }
+                >p{
+                    font-size: 40px;
+                    text-transform: capitalize;
+                    color: white;
+                    margin-left: 50px;
+                }
+                >.butt5{
+                    width: 240px;
+                    height: 70px;
+                    position: absolute;
+                    bottom: 60px; right:280px;
+                    background-color:rgb(36, 41, 45) ;
+                    border: 2px solid rgba(255, 255, 255, 0.788);
+                    border-radius: 3px;
+                    color: white;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    transition: .4s;
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 0.059);
+                    }
+                }
+            }
+        }
+        .gallery2{
+            width: 77%;
+            height: 420px;
+            /* border: 2px solid red; */
+            position: absolute;
+            right:0; top: 3040px ;
+            display: flex;
+            >figure{
+                height: 420px;
+                transition: 1s;
+                &:hover{
+                    filter: sepia(50%);
+                    transform: scale(1.1);
+                }
+                >img{
+                   width:292px;
+                   height: 100%;
+                   object-fit: cover;
+                   border-radius: 3px;
+                }
+            }
+        }
+        .coin{
+            width: 77%;
+            height: 150px;
+            /* border: 2px solid yellowgreen; */
+            position: absolute;
+            right: 0; top: 3460px;
+            display: flex;
+            background-color:rgb(36, 41, 45) ;
+            >h3{
+                font-size: 25px;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.801);
+                padding: 50px 50px;
+                transition: .5s;
+                &:hover{
+                    color:rgba(174, 137, 93, 0.886)  ;
+                }
+            }
+        }
+        .end{
+            width: 77%;
+            height: 250px;
+            /* border: 2px solid red; */
+            position: absolute;
+            right: 0; top:3600px;
+            background-color:rgb(49, 53, 57) ;
+            >h2{
+                font-size: 20px;
+                color: rgba(255, 255, 255, 0.836);
+                text-transform: capitalize;
+                margin: 20px 30px;
+                transition: .5s;
+                &:hover{
+                    color:rgba(174, 137, 93, 0.886) ;
+                }
+            }
+            >.icon2{
+                font-size: 40px;
+                margin-left: 30px;
+                transition: .5s;
+                >span{
+                    &:hover{
+                        color: rgba(174, 137, 93, 0.886);
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="aside">
+        <nav class="menu">
+            <figure>
+                <img src="img/cafe_logo2x.png" alt="">
+            </figure>
+            <ul>
+                <li id="line"><a href="" id="onee">home</a></li>
+                <li><a href="">about us</a></li>
+                <li><a href="">food & drink</a></li>
+                <li><a href="">our story</a></li>
+                <li><a href="">locations</a></li>
+                <li><a href="">contact</a></li>
+            </ul>
+            <div class="icon">
+                <i class="icon-facebook"></i>
+                <i class=" icon-tumblr-squared"></i>
+                <i class=" icon-instagram"></i>
+                <i class="icon-youtube-play"></i>
+            </div>
+        </nav>
+    </div>
+    <section class="hero"></section>
+    <div class="new">
+        <h1>A NEW WAY OF EATING</h1>
+        <h3>AVADA CAFE EXTRAORDINARY FOOD AT UNBEATABLE PRICES</h3>
+        <div class="hline"></div>
+        <div class="imge">
+            <img src="img/about-12.jpg" alt="">
+            <img src="img/about-22.jpg" alt="">
+        </div>
+        <p>Café au lait, breve coffee latte froth shop macchiato grinder. Wings cream steamed single shot, cup cinnamon et aroma acerbic chicory aroma java. Plunger pot medium, latte chicory coffee extra cappuccino siphon frappuccino extraction kopi-luwak chicory. Flavour, body aromatic sit french press java. Qui kopi-luwak qui in mazagran galão decaffeinated java. Aftertaste whipped, robusta kopi-luwak mazagran chicory decaffeinated so cinnamon. Frappuccino grinder aged, mug plunger pot caramelization latte eu spoon. Cup, flavour, spoon plunger pot and, strong, macchiato organic whipped sugar.</p>
+        <div class="butt">
+            <button>body avada today</button>
+        </div>
+    </div>
+    <figure class="nim">
+        <img src="" alt="">
+    </figure>
+    <div class="parall">
+        <h2>RESERVATIONS</h2>
+        <div class="line2"></div>
+        <p id="parag2">We’re not trying to be cool but sadly there are only 68 seats in each cafe  <br>and they fill up quickly. If you want in, make a reservation today.</p>
+        <div class="butt2">
+            <button>reserve now</button>
+        </div>
+    </div>
+    <div class="new2">
+        <div class="swiss">
+            <h2>avada café new item</h2>
+            <p>avada cafe announces the  <br>world’s famous swiss <br> cheeseburger</p>
+            <div class="line3"></div>
+            <button class="butt4">view full menu</button>
+        </div>
+        <div class="special">
+            <h2>special promotion</h2>
+            <p>avada cafe introduces <br> special 10% discount on <br> some locations</p>
+            <div class="line4"></div>
+            <button class="butt5">view locations</button>
+        </div>
+    </div>
+    <div class="gallery2">
+            <figure>
+                <img src="img/blog-11.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="img/blog-21.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="img/blog-311.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="img/blog-51.jpg" alt="">
+            </figure>
+    </div>
+    <div class="coin">
+        <h3>NEW YORK OPENING</h3>
+        <h3>1,000,000 VISITS</h3>
+        <h3>EXCLUSIVE COFFEE</h3>
+        <h3>PACIFIC OPENING</h3>
+    </div>
+    <div class="end">
+        <h2> 2024 developed by = mohadese zare</h2>
+        <h2>@mohadsezare_web</h2>
+        <h2>linkedin = mohadse zare</h2>
+        <div class="icon2">
+            <span class="icon-instagram"></span>
+            <span class=" icon-linkedin"></span>
+        </div>
+    </div>
+</body>
+</html>
